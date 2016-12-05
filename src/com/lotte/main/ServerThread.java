@@ -71,7 +71,7 @@ public class ServerThread extends Thread {
 
 	public void speak(String msg) {
 		try {
-			serverMain.log_area.append(msg + "\n");		//추후 삭제
+			serverMain.log_area.append(msg + "\n"); // 추후 삭제
 			buffw.write(msg + "\n");
 			buffw.flush();
 		} catch (IOException e) {
@@ -89,16 +89,16 @@ public class ServerThread extends Thread {
 		try {
 			JSONParser jsonParser = new JSONParser();
 			JSONObject jsonObject = (JSONObject) jsonParser.parse(msg);
-			serverMain.log_area.append(msg + "\n");		//추후 삭제
+			serverMain.log_area.append(msg + "\n"); // 추후 삭제
 			if (jsonObject.get("request").equals("login")) {
 				JSONObject obj = (JSONObject) jsonObject.get("data");
 				id = (String) obj.get("id");
-				
+
 				if (haveLogedIn(id)) {
 					String pwd = (String) obj.get("password");
 					MemberDTO dto = new MemberDTO();
 					dto = getLoginCheck(id, pwd);
-					
+
 					if (dto == null) {
 						sb.delete(0, sb.length());
 						sb.append("{\"response\" : \"login\",");
@@ -108,7 +108,8 @@ public class ServerThread extends Thread {
 						speak(sb.toString());
 					} else {
 						updateUserIp(ip, id);
-						String log = "[ "+serverMain.sdf.format(serverMain.cal.getTime())+" ] "+id+" is logged in\n";
+						String log = "[ " + serverMain.sdf.format(serverMain.cal.getTime()) + " ] " + id
+								+ " is logged in\n";
 						serverMain.log_area.append(log);
 						serverMain.addLog(log);
 						sb.delete(0, sb.length());
@@ -123,7 +124,8 @@ public class ServerThread extends Thread {
 				}
 
 				else {
-					String log = "[ "+serverMain.sdf.format(serverMain.cal.getTime())+" ] "+id+" failed to log in on address : "+ip+"\n";
+					String log = "[ " + serverMain.sdf.format(serverMain.cal.getTime()) + " ] " + id
+							+ " failed to log in on address : " + ip + "\n";
 					serverMain.log_area.append(log);
 					serverMain.addLog(log);
 					sb.delete(0, sb.length());
@@ -134,11 +136,12 @@ public class ServerThread extends Thread {
 					speak(sb.toString());
 				}
 			}
-			
-			else if(jsonObject.get("request").equals("disconnect")){
-				JSONObject obj=(JSONObject)jsonObject.get("data");
-				disConnection((String)obj.get("id"));
-				String log = "[ "+serverMain.sdf.format(serverMain.cal.getTime())+" ] "+id+" loged offed on address : "+ip+"\n";
+
+			else if (jsonObject.get("request").equals("disconnect")) {
+				JSONObject obj = (JSONObject) jsonObject.get("data");
+				disConnection((String) obj.get("id"));
+				String log = "[ " + serverMain.sdf.format(serverMain.cal.getTime()) + " ] " + id
+						+ " loged offed on address : " + ip + "\n";
 				serverMain.log_area.append(log);
 				serverMain.addLog(log);
 				sb.delete(0, sb.length());
@@ -148,17 +151,17 @@ public class ServerThread extends Thread {
 				sb.append("}}");
 				speak(sb.toString());
 			}
-			
-else if(jsonObject.get("request").equals("showconnector")){
-				
-				ArrayList<MemberDTO> list=showConnector(ip);
-				if(list!=null){
+
+			else if (jsonObject.get("request").equals("showconnector")) {
+
+				ArrayList<MemberDTO> list = showConnector(ip);
+				if (list != null) {
 					sb.delete(0, sb.length());
 					sb.append("{\"response\" : \"showconnector\",");
 					sb.append("\"success\" : \"true\",");
 					sb.append("\"data\" : [");
-					for(int i=0;i<list.size();i++){
-						MemberDTO dto=list.get(i);
+					for (int i = 0; i < list.size(); i++) {
+						MemberDTO dto = list.get(i);
 						sb.append("{");
 						sb.append("\"name\" : \"" + list.get(i).getName() + "\",");
 						sb.append("\"ID\" : \"" + list.get(i).getId() + "\"");
@@ -171,7 +174,7 @@ else if(jsonObject.get("request").equals("showconnector")){
 					sb.append("]}");
 					speak(sb.toString());
 				}
-				
+
 				else {
 					sb.delete(0, sb.length());
 					sb.append("{\"response\" : \"showconnector\",");
@@ -179,6 +182,16 @@ else if(jsonObject.get("request").equals("showconnector")){
 					sb.append("}");
 					speak(sb.toString());
 				}
+			} else if (jsonObject.get("request").equals("create_room")) {
+				JSONObject obj = (JSONObject) jsonObject.get("data");
+				String[] data = new String[5];
+				sb.delete(0, sb.length());
+				sb.append("{\"response\" : \"create_room\",");
+				sb.append("\"data\" : {");
+				sb.append("\"success\" : \"true\",");
+				sb.append("\"host_ip\" : \"" + ip + "\"");
+				sb.append("}}");
+				speak(sb.toString());
 			}
 
 		} catch (ParseException e) {
@@ -187,7 +200,8 @@ else if(jsonObject.get("request").equals("showconnector")){
 	}
 
 	public boolean haveLogedIn(String id) {
-		String log = "[ "+serverMain.sdf.format(serverMain.cal.getTime())+" ] "+id+" is try to log in on address : "+ip+"\n";
+		String log = "[ " + serverMain.sdf.format(serverMain.cal.getTime()) + " ] " + id
+				+ " is try to log in on address : " + ip + "\n";
 		serverMain.log_area.append(log);
 		serverMain.addLog(log);
 		return dao.haveLogedIn(id);
@@ -206,14 +220,14 @@ else if(jsonObject.get("request").equals("showconnector")){
 			serverMain.log_area.append("[ Debug ] : User Ip updating is failed.\n");
 		}
 	}
-	
-	public void disConnection(String id){
+
+	public void disConnection(String id) {
 		dao.disConnection(ip, id);
 	}
-	
-	public ArrayList<MemberDTO> showConnector(String ip){
+
+	public ArrayList<MemberDTO> showConnector(String ip) {
 		return dao.showConnector(ip, id);
-		
+
 	}
-	
+
 }
