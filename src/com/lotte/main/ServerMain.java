@@ -6,11 +6,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Vector;
 
@@ -37,6 +41,12 @@ public class ServerMain extends JFrame implements ActionListener, Runnable{
 	
 	Thread mainThread;
 	
+	public Calendar cal = Calendar.getInstance();
+	public SimpleDateFormat sdf = new SimpleDateFormat("yyyy:MM:dd-hh:mm:ss");
+	SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
+	String datetime;
+	
+	BufferedWriter out;
 	//public HashMap<Integer, Vector<MainServerThreadDTO>> req_room = new HashMap<Integer, Vector<MainServerThreadDTO>>();
 	
 	
@@ -44,6 +54,13 @@ public class ServerMain extends JFrame implements ActionListener, Runnable{
 	public ServerMain() {
 		
 		bt_connection = new JButton("Open Server");
+		
+		try {
+			out = new BufferedWriter(new FileWriter(sdf2.format(cal.getTime())+".txt"));
+		} catch (IOException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		
 		log_area = new JTextArea();
 		scroll = new JScrollPane(log_area);
@@ -72,13 +89,10 @@ public class ServerMain extends JFrame implements ActionListener, Runnable{
 			}
 		});
 		setTitle("MainServer");
-		setSize(400, 600);
+		setSize(1000, 600);
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setVisible(true);
-		
-	
-		
 	}
 	
 	public void dbConnection(){
@@ -87,16 +101,22 @@ public class ServerMain extends JFrame implements ActionListener, Runnable{
 	}
 	
 	public void connection(){
+		String log;
 		try {
 			server = new ServerSocket(port);
-			log_area.append("[ Debug ] : Server is opend\n");
+			log = "[ Debug ] : Server is opend on "+sdf.format(cal.getTime())+"\n";
+			log_area.append(log);
+			addLog(log);
 			dbConnection();
+			
 			while(true){
 				Socket client = server.accept();
 				String ip = client.getInetAddress().getHostAddress();
-				log_area.append(("[ Debug ] : Client "+ip+" is connected\n"));
-				//MainServerThread ct = new MainServerThread(client, con, ip, this);
-				//ct.start();
+				log = "[ Debug ] : Client "+ip+" is connected on "+sdf.format(cal.getTime())+"\n";
+				log_area.append(log);
+				addLog(log);
+				ServerThread ct = new ServerThread(client, con, ip, this);
+				ct.start();
 				
 			}
 		} catch (IOException e) {
@@ -117,5 +137,16 @@ public class ServerMain extends JFrame implements ActionListener, Runnable{
 	
 	public static void main(String[] args) throws Exception {
 		new ServerMain();
+	}
+	
+	public void addLog(String msg){
+		try {
+			out.append(msg);
+			out.newLine();
+			out.flush();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("[Debug] : Error occured on FileOutput");
+		}
 	}
 }

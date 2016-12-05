@@ -22,7 +22,9 @@ public class DatabaseConnection {
 	public Connection getConnection(){
 		try {
 			con = DriverManager.getConnection(url, user, password);
-			serverMain.log_area.append("[ Debug ] : Database connection is successed\n");
+			String log = "[ Debug ] : Database connection is successed on "+serverMain.sdf.format(serverMain.cal.getTime())+"\n";
+			serverMain.log_area.append(log);
+			serverMain.addLog(log);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();

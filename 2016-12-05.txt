@@ -1,0 +1,218 @@
+[ Debug ] : Server is opend on 2016:12:05-04:07:35
+
+[ Debug ] : Database connection is successed on 2016:12:05-04:07:35
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte requests ShowConnector method on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte requests ShowConnector method on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte requests ShowConnector method on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte requests ShowConnector method on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte requests ShowConnector method on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte failed to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte failed to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
+[ 2016:12:05-04:07:35 ] lotte is try to log off on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] lotte loged offed on address : 10.131.152.120
+
+[ Debug ] : Client 10.131.152.120 is connected on 2016:12:05-04:07:35
+
+[ 2016:12:05-04:07:35 ] lotte is try to log in on address : 10.131.152.120
+
+[ 2016:12:05-04:07:35 ] : Have Loged in method requested by "lotte"
+
+[ 2016:12:05-04:07:35 ] lotte is logged in
+
